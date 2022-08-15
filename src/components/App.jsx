@@ -2,6 +2,7 @@ import { Component } from 'react';
 import Main from './Main/Main';
 import { nanoid } from 'nanoid';
 import Phonebook from './Phonebook/Phonebook';
+import Contacts from './Phonebook/Contacts/Contacts';
 
 class App extends Component {
   state = {
@@ -55,6 +56,11 @@ class App extends Component {
           notEmptyList={this.state.contacts.length}
           valueFilter={this.state.filter}
         />
+        <Contacts
+          name="Contacts"
+          contactsList={visibleContacts}
+          onChange={this.handleChange}
+        ></Contacts>
       </Main>
     );
   }
