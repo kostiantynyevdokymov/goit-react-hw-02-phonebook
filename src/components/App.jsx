@@ -56,11 +56,17 @@ class App extends Component {
           notEmptyList={this.state.contacts.length}
           valueFilter={this.state.filter}
         />
-        <Contacts
-          name="Contacts"
-          contactsList={visibleContacts}
-          onChange={this.handleChange}
-        ></Contacts>
+        {this.state.contacts.length > 0 ? (
+          <Contacts
+            name="Contacts"
+            contactsList={visibleContacts}
+            onChange={this.handleChange}
+            value={this.state.filter}
+            onClickDelete={this.onClickDelete}
+          />
+        ) : (
+          <p>Phonebook empty</p>
+        )}
       </Main>
     );
   }

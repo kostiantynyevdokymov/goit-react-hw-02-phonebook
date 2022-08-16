@@ -15,11 +15,10 @@ const Contacts = ({ name, contactsList, onChange, value, onClickDelete }) => (
       {contactsList.map(contact => (
         <li key={contact.id}>
           <span>
-            {contact.name}
-            {contact.number}
+            {contact.name} {contact.number}
           </span>
           <ButtonDelete
-            name="delete"
+            name="Delete"
             onClickDelete={() => onClickDelete(contact.id)}
             id={contact.id}
           />

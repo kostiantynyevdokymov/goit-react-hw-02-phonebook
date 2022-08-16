@@ -1,10 +1,14 @@
 import styled from '@emotion/styled';
 
 const DeleteBtn = styled.button`
-  margin-left: 30px;
+  margin-left: 10px;
   background-color: orange;
-  width: 50px;
-  height: 15px;
+  color: black;
+  cursor: pointer;
+  border: 2px solid black;
+  &: hover {
+    background-color: #ffa600ab;
+  }
 `;
 
 export default DeleteBtn;
